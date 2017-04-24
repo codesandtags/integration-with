@@ -1,0 +1,28 @@
+// LAYOUT
+$global-font-size: 16;
+
+// COLORS
+$color-white: #ffffff;
+$color-black: #000;
+$color-orange: #DE411B;
+$color-light-orange: #fc562e;
+$color-gray: #c4c4c4;
+$color-dark-gray: #48545B;
+$color-medium-gray: #E0E0E1;
+$color-light-gray: #F7F8F9;
+$border-style: 1px solid $color-medium-gray;
+
+// FONTS
+$fa-font-path: "~font-awesome/fonts";
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+
+$font-stack: Helvetica, sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-ranga: 'Ranga', cursive;
+$font-roboto-condensed: 'Roboto Condensed', sans-serif;
+$font-awesome: FontAwesome;
+
+//icons
+$fa-user: "\f007";
+$fa-home: "\f015";
+$fa-trash: "\f014";

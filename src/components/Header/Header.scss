@@ -1,0 +1,36 @@
+@import '../../styles/common.scss';
+
+.iw-header {
+  background-color: #222;
+  height: em(50px);
+  padding: em(10px) 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .iw-logo {
+    animation: iw-logo-spin infinite 10s linear;
+    height: 30px;
+  }
+
+  h1 {
+    font-family: $font-ranga;
+    text-transform: none;
+
+    a {
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+
+  @keyframes iw-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+}

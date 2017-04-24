@@ -4,7 +4,7 @@
 
 ## Goal
 
-Integrate with the most famous APIs and create a base and examples for futures projects. The integrations that support this project are :
+Integration with the most famous APIs and create a base and examples for futures projects. The integrations that support this project are :
  * [Instagram](https://www.instagram.com/developer/)
  * [Facebook](https://developers.facebook.com/)
  * [Github](https://developer.github.com/v3/) 
