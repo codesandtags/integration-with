@@ -1,0 +1,10 @@
+@import '../../styles/common.scss';
+
+.iw-footer {
+  height: em(20px);
+  background: $color-black;
+  color: $color-white;
+  text-align: center;
+  font-size: em(12px);
+  padding: em(10px) 0;
+}

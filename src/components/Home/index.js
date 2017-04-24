@@ -4,11 +4,17 @@ import React, {Component} from "react";
 // styles
 import "./Home.css";
 
-class App extends Component {
+const config = {
+    cssClasses: {
+        root: 'iw-home'
+    }
+};
+
+class Home extends Component {
     render() {
         return (
-            <div>
-                <p className="App-intro">
+            <div className={config.cssClasses.root}>
+                <p>
                     This project is a compilation of the integration with several famous APIs. The target for the
                     integrations are :
                 </p>
@@ -25,4 +31,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Home;

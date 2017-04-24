@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 // components
 import Home from "../../components/Home";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import PageNotFound from "../../components/PageNotFound";
 // styles
 import "./App.css";
@@ -24,6 +25,7 @@ class App extends Component {
                         <Route exact path="/" component={Home}/>
                         <Route component={PageNotFound}/>
                     </Switch>
+                    <Footer />
                 </div>
             </Router>
         );
