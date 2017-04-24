@@ -1,6 +1,6 @@
 # 🌓 Integration-with 
 
-> If want to know to integrate with the most famous APIs, this project is for you.
+> If you want to know to integrate with the most famous APIs, this project is for you.
 
 ## Goal
 
