@@ -9,9 +9,13 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "axios": "^0.16.1",
+    "babel-cli": "^6.24.1",
+    "dotenv": "^4.0.0",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
+    "querystring": "^0.2.0",
     "react-router-dom": "^4.1.1",
     "react-scripts": "0.9.5"
   },
@@ -20,9 +24,15 @@
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "start:server": "node server",
+    "start:server": "babel-node server",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
   }
 }
