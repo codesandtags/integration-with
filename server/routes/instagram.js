@@ -2,7 +2,7 @@
 import express from "express";
 import {instagram_api} from "../config";
 import axios from "axios";
-import querystring from 'querystring';
+import querystring from "querystring";
 
 const router = express.Router();
 
@@ -12,9 +12,26 @@ router.get('/', function(req, res, next) {
     .replace('CLIENT-ID', instagram_api.client_id)
     .replace('REDIRECT-URI', instagram_api.redirect_uri);
 
+  res.send(instagram_api);
+});
+
+router.get('/user', function(req, res) {
+  const user = instagram_api.user || {};
+
+  res.send({
+    user: user,
+  });
+});
+
+router.get('/signin', function(req, res, next) {
+  const url = instagram_api.api_url
+    .replace('CLIENT-ID', instagram_api.client_id)
+    .replace('REDIRECT-URI', instagram_api.redirect_uri);
+
   res.redirect(url);
   //res.send('loading...');
 });
+
 
 router.get('/callback', (req, res) => {
   const params = {
@@ -29,7 +46,8 @@ router.get('/callback', (req, res) => {
 
   axios.post(instagram_api.oauth_url, querystring.stringify(params))
     .then((data) => {
-      console.log('por fin socio', data);
+      console.log('por fin socio', data.access_token);
+      instagram_api.access_token = data.access_token;
     })
     .catch((error) => {
       console.error(error);

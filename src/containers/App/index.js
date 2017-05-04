@@ -1,6 +1,8 @@
 // dependencies
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+// containers
+import Instagram from "../Instagram";
 // components
 import Home from "../../components/Home";
 import Header from "../../components/Header";
@@ -23,6 +25,7 @@ class App extends Component {
                     <Header />
                     <Switch>
                         <Route exact path="/" component={Home}/>
+                        <Route exact path="/instagram" component={Instagram}/>
                         <Route component={PageNotFound}/>
                     </Switch>
                     <Footer />
