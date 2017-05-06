@@ -11,14 +11,24 @@ class Instagram extends React.Component {
     super(props);
 
     this.verifyUserLogged = this.verifyUserLogged.bind(this);
+    this.signIn = this.signIn.bind(this);
   }
 
   componentDidMount() {
+    console.log(this.props.match);
+
     this.verifyUserLogged();
   }
 
-  verifyUserLogged() {
+  signIn() {
     axios.get('http://localhost:9000/api/instagram/user')
+      .then((data) => {
+        console.log(data);
+      });
+  }
+
+  verifyUserLogged() {
+    axios.get('http://localhost:9000/api/instagram/signin')
       .then((data) => {
         console.log(data);
       });
